@@ -121,10 +121,22 @@ Cette capture montre la page affichant la liste de tous les produits stockés da
 On y retrouve un tableau contenant l’identifiant, le nom, le prix et la quantité de chaque produit.  
 Le bouton **Delete** n’apparaît que pour les utilisateurs ayant le rôle **ADMIN**, grâce à la directive `sec:authorize`.
 
+Pour utulisateur 1:
+
+<img width="959" height="189" alt="image" src="https://github.com/user-attachments/assets/fa690998-cde5-436d-8b39-9d586dfbbc03" />
+
+Pour administateur :
+
+<img width="959" height="206" alt="image" src="https://github.com/user-attachments/assets/0998fb83-c65d-405c-a7bb-04aa2830aa70" />
+
+
+
 
 ### 13.  Formulaire d’ajout  
-Cette capture représente la page permettant d’ajouter ou de modifier un produit.  
+Cette capture représente la page permettant d’ajouter  un produit.  
 Le formulaire utilise les validations Thymeleaf pour afficher automatiquement les erreurs (comme un nom trop court ou une quantité invalide), ce qui améliore la qualité de la saisie utilisateur.
+
+<img width="959" height="251" alt="image" src="https://github.com/user-attachments/assets/3a660936-d5ce-4a92-8ff9-7340fa5b272e" />
 
 
 ### 1️4. login.png — Page de connexion  
@@ -132,19 +144,13 @@ Cette capture montre la page de connexion personnalisée de l’application.
 Elle fonctionne entièrement avec Spring Security et respecte les champs obligatoires **username** et **password**.  
 Cette page permet d’authentifier l’utilisateur avant qu’il accède aux fonctionnalités protégées.
 
-
-
-### 1️5. project_structure.png — Structure du projet  
-Cette capture montre l’arborescence générale du projet dans l’IDE.  
-Elle met en avant l’organisation MVC : entités, repository, sécurité, démarrage Spring Boot, templates Thymeleaf et fichiers de configuration.  
-Cette structure respecte les bonnes pratiques recommandées par Spring Boot.
+<img width="481" height="172" alt="image" src="https://github.com/user-attachments/assets/72024ba5-ebe7-4cd9-9610-83a844ab0a70" />
 
 
 
-### 1️6. h2_console.png — Console H2  
-Cette capture illustre l’accès à la console H2 intégrée.  
-Elle permet d’examiner la structure de la table `Product`, d’inspecter les données enregistrées et de vérifier le fonctionnement de JPA/Hibernate.  
-C’est un outil essentiel pour le débogage et la compréhension du schéma relationnel.
+
+
+
 
 
 
