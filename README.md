@@ -26,4 +26,6 @@ Le but pédagogique est de comprendre comment assembler ces composants pour cons
 <img width="530" height="329" alt="image" src="https://github.com/user-attachments/assets/2cc9e5cf-d4a0-49a0-951c-0a439f5752c5" />
 
 #   3. Structure du projet
+<img width="287" height="424" alt="image" src="https://github.com/user-attachments/assets/47f00196-75c6-4260-8b4a-2f333691c59f" />
+
 
