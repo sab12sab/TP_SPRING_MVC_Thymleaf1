@@ -132,6 +132,9 @@ Le formulaire utilise les validations Thymeleaf pour afficher automatiquement le
 
 <img width="959" height="251" alt="image" src="https://github.com/user-attachments/assets/3a660936-d5ce-4a92-8ff9-7340fa5b272e" />
 
+<img width="644" height="302" alt="image" src="https://github.com/user-attachments/assets/5a4c9d1a-ad41-4967-89ab-1bd31563e95c" />
+
+
 
 # 12. login.png — Page de connexion  
 Cette capture montre la page de connexion personnalisée de l’application.  
