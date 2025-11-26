@@ -33,14 +33,32 @@ Cette organisation respecte l’architecture MVC et sépare proprement les entit
 
  #  4. Entité Product
 
-L’entité Product représente les produits gérés par l'application. Elle intègre la validation JSR-303 et utilise Lombok pour générer automatiquement getters, setters et constructeurs.
+Cette capture montre l’entité Product, qui représente les produits enregistrés dans la base de données. Elle contient les attributs id, name, price et quantity, accompagnés de validations JSR-303 pour assurer la cohérence des données. Cette classe est transformée en table H2 grâce à JPA et Hibernate.
+<img width="326" height="285" alt="image" src="https://github.com/user-attachments/assets/71317113-4139-41de-86a4-cd1d9f19334e" />
+
+
 
 
 
 # 5. Repository : ProductRepository
 
-Le repository étend JpaRepository, ce qui fournit automatiquement toutes les opérations CRUD :
+Cette capture illustre le repository ProductRepository, qui hérite de JpaRepository. Il fournit automatiquement toutes les opérations CRUD (ajout, suppression, modification, affichage) sans écrire de SQL. C’est la couche reliant l’application aux données.
+<img width="553" height="188" alt="image" src="https://github.com/user-attachments/assets/775bd86b-3fa0-4859-8688-167279067797" />
+
 
 # 6. Initialisation des données (CommandLineRunner)
 
-Lors du démarrage de l’application, des produits sont insérés automatiquement dans la base :
+Cette capture montre le CommandLineRunner, exécuté au démarrage de l’application. Il injecte automatiquement trois produits dans la base H2 afin de tester rapidement l’interface sans saisie manuelle.
+<img width="635" height="270" alt="image" src="https://github.com/user-attachments/assets/eb92052d-b612-4b26-908e-fc47a645d2a9" />
+
+
+
+
+# 7. Sécurité : Spring Security
+Cette capture présente l’initialisation des utilisateurs dans Spring Security. Trois comptes (user1, user2 et admin) sont créés avec des rôles distincts. Cela permet de tester les autorisations et l’accès aux pages sécurisées.
+<img width="734" height="101" alt="image" src="https://github.com/user-attachments/assets/b033209d-13f3-42ca-bf60-a3ed95680323" />
+
+
+
+
+
