@@ -85,6 +85,8 @@ Cette capture montre la configuration du `PasswordEncoder` utilisant l’algorit
 Il sert à chiffrer les mots de passe avant de les stocker, ce qui garantit une sécurité renforcée des informations utilisateurs.  
 BCrypt est l’encodeur recommandé par Spring Security pour la protection des mots de passe.
 
+
+
 <img width="406" height="77" alt="image" src="https://github.com/user-attachments/assets/755a934b-4c66-4221-abf2-d7dc3961c847" />
 
 Certaines ressources sont publiques :
@@ -100,15 +102,6 @@ Si un utilisateur n’a pas les permissions nécessaires, il est redirigé vers 
 <img width="704" height="41" alt="image" src="https://github.com/user-attachments/assets/17737dd6-61e2-4ca0-99e6-e45ec2c15ecd" />
 
 
-
-
-
-
-
-### 9.  Règles d’accès Spring Security  
-Cette capture présente les règles d’accès configurées dans `SecurityConfig`.  
-Certaines ressources comme **/public/** et **/webjars/** sont accessibles sans authentification, alors que toutes les autres pages nécessitent une connexion.  
-En cas d’accès à une ressource protégée sans permis, l’utilisateur est automatiquement redirigé vers une page d’erreur dédiée.
 
 
 
