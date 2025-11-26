@@ -3,7 +3,7 @@
 ##  Objectif du projet
 Le but de ce TP est de développer une application Web basée sur Spring Boot permettant de gérer des produits via un CRUD complet, d’appliquer la validation des données, d’utiliser Thymeleaf pour l’interface et de sécuriser l’accès aux pages avec Spring Security.
 
----
+
 
 #  1. Introduction
 Ce projet illustre plusieurs modules essentiels de l’écosystème Spring :
@@ -18,7 +18,7 @@ Ce projet illustre plusieurs modules essentiels de l’écosystème Spring :
 
 Le but pédagogique est de comprendre comment assembler ces composants pour construire une application cohérente, modulaire et sécurisée.
 
----
+
 
 #  2. Configuration de l’application
 
@@ -77,54 +77,50 @@ Cette capture montre la configuration du `PasswordEncoder` utilisant l’algorit
 Il sert à chiffrer les mots de passe avant de les stocker, ce qui garantit une sécurité renforcée des informations utilisateurs.  
 BCrypt est l’encodeur recommandé par Spring Security pour la protection des mots de passe.
 
----
+
 
 ### 9. access_rules.png — Règles d’accès Spring Security  
 Cette capture présente les règles d’accès configurées dans `SecurityConfig`.  
 Certaines ressources comme **/public/** et **/webjars/** sont accessibles sans authentification, alors que toutes les autres pages nécessitent une connexion.  
 En cas d’accès à une ressource protégée sans permis, l’utilisateur est automatiquement redirigé vers une page d’erreur dédiée.
 
----
+
 
 ### 10. not_authorized.png — Page d’accès refusé  
 Cette capture montre la page **Not Authorized**, affichée lorsqu'un utilisateur tente d’accéder à une page pour laquelle il n’a pas les droits.  
 Elle avertit clairement l’utilisateur et améliore l’expérience grâce à un message explicatif adapté.
 
----
+
 
 ### 11. layout.png — Layout principal Thymeleaf  
 Cette capture illustre le layout principal de l'application, qui sert de modèle pour toutes les pages.  
 Il contient la barre de navigation, le nom de l’utilisateur connecté (affiché via Spring Security) et une zone dynamique gérée avec `layout:fragment`.  
 Toutes les pages héritent automatiquement de ce layout pour maintenir une interface cohérente et professionnelle.
 
----
-
 ### 12. products_list.png — Liste des produits  
 Cette capture montre la page affichant la liste de tous les produits stockés dans la base de données.  
 On y retrouve un tableau contenant l’identifiant, le nom, le prix et la quantité de chaque produit.  
 Le bouton **Delete** n’apparaît que pour les utilisateurs ayant le rôle **ADMIN**, grâce à la directive `sec:authorize`.
 
----
 
 ### 13. form_add.png — Formulaire d’ajout  
 Cette capture représente la page permettant d’ajouter ou de modifier un produit.  
 Le formulaire utilise les validations Thymeleaf pour afficher automatiquement les erreurs (comme un nom trop court ou une quantité invalide), ce qui améliore la qualité de la saisie utilisateur.
 
----
 
 ### 1️4. login.png — Page de connexion  
 Cette capture montre la page de connexion personnalisée de l’application.  
 Elle fonctionne entièrement avec Spring Security et respecte les champs obligatoires **username** et **password**.  
 Cette page permet d’authentifier l’utilisateur avant qu’il accède aux fonctionnalités protégées.
 
----
+
 
 ### 1️5. project_structure.png — Structure du projet  
 Cette capture montre l’arborescence générale du projet dans l’IDE.  
 Elle met en avant l’organisation MVC : entités, repository, sécurité, démarrage Spring Boot, templates Thymeleaf et fichiers de configuration.  
 Cette structure respecte les bonnes pratiques recommandées par Spring Boot.
 
----
+
 
 ### 1️6. h2_console.png — Console H2  
 Cette capture illustre l’accès à la console H2 intégrée.  
