@@ -80,7 +80,7 @@ Cela permet de tester les autorisations et l’accès aux pages sécurisées.
 
 
 
-### 8.  BCryptPasswordEncoder  
+# 8.  BCryptPasswordEncoder  
 Cette capture montre la configuration du `PasswordEncoder` utilisant l’algorithme **BCrypt**.  
 Il sert à chiffrer les mots de passe avant de les stocker, ce qui garantit une sécurité renforcée des informations utilisateurs.  
 BCrypt est l’encodeur recommandé par Spring Security pour la protection des mots de passe.
@@ -102,7 +102,7 @@ Si un utilisateur n’a pas les permissions nécessaires, il est redirigé vers 
 <img width="704" height="41" alt="image" src="https://github.com/user-attachments/assets/17737dd6-61e2-4ca0-99e6-e45ec2c15ecd" />
 
 
-### 9.  Layout principal Thymeleaf  
+# 9.  Layout principal Thymeleaf  
 Cette capture illustre le layout principal de l'application, qui sert de modèle pour toutes les pages.  
 Il contient la barre de navigation, le nom de l’utilisateur connecté (affiché via Spring Security) et une zone dynamique gérée avec `layout:fragment`.  
 Toutes les pages héritent automatiquement de ce layout pour maintenir une interface cohérente et professionnelle.
@@ -110,7 +110,7 @@ Toutes les pages héritent automatiquement de ce layout pour maintenir une inter
 <img width="793" height="389" alt="image" src="https://github.com/user-attachments/assets/5bf783af-3110-45a5-9f45-c8a44433c9b1" />
 
 
-### 10.  Liste des produits  
+# 10.  Liste des produits  
 Cette capture montre la page affichant la liste de tous les produits stockés dans la base de données.  
 On y retrouve un tableau contenant l’identifiant, le nom, le prix et la quantité de chaque produit.  
 Le bouton **Delete** n’apparaît que pour les utilisateurs ayant le rôle **ADMIN**, grâce à la directive `sec:authorize`.
@@ -126,14 +126,14 @@ Pour administateur :
 
 
 
-### 11.  Formulaire d’ajout  
+# 11.  Formulaire d’ajout  
 Cette capture représente la page permettant d’ajouter  un produit.  
 Le formulaire utilise les validations Thymeleaf pour afficher automatiquement les erreurs (comme un nom trop court ou une quantité invalide), ce qui améliore la qualité de la saisie utilisateur.
 
 <img width="959" height="251" alt="image" src="https://github.com/user-attachments/assets/3a660936-d5ce-4a92-8ff9-7340fa5b272e" />
 
 
-### 12. login.png — Page de connexion  
+# 12. login.png — Page de connexion  
 Cette capture montre la page de connexion personnalisée de l’application.  
 Elle fonctionne entièrement avec Spring Security et respecte les champs obligatoires **username** et **password**.  
 Cette page permet d’authentifier l’utilisateur avant qu’il accède aux fonctionnalités protégées.
