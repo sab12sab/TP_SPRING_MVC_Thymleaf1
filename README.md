@@ -22,12 +22,16 @@ Le but pédagogique est de comprendre comment assembler ces composants pour cons
 
 #  2. Configuration de l’application
 
-## ⚙ Configuration H2 & Spring Boot
+##  Configuration H2 & Spring Boot
 Cette configuration active une base H2 en mémoire, met automatiquement à jour les tables selon les entités et démarre l’application sur le port 8084.
+
+
 <img width="530" height="329" alt="image" src="https://github.com/user-attachments/assets/2cc9e5cf-d4a0-49a0-951c-0a439f5752c5" />
 
 #   3. Structure du projet
 Cette organisation respecte l’architecture MVC et sépare proprement les entités, la couche DAO, la sécurité et les vues.
+
+
 <img width="287" height="424" alt="image" src="https://github.com/user-attachments/assets/47f00196-75c6-4260-8b4a-2f333691c59f" />
 <img width="274" height="273" alt="image" src="https://github.com/user-attachments/assets/09f611de-1bc6-4a95-8057-a95b3b8cb348" />
 
@@ -36,6 +40,8 @@ Cette organisation respecte l’architecture MVC et sépare proprement les entit
 Cette capture montre l’entité Product, qui représente les produits enregistrés dans la base de données. 
 Elle contient les attributs id, name, price et quantity, accompagnés de validations JSR-303 pour assurer la cohérence des données. 
 Cette classe est transformée en table H2 grâce à JPA et Hibernate.
+
+
 <img width="326" height="285" alt="image" src="https://github.com/user-attachments/assets/71317113-4139-41de-86a4-cd1d9f19334e" />
 
 
@@ -47,6 +53,8 @@ Cette classe est transformée en table H2 grâce à JPA et Hibernate.
 Cette capture illustre le repository ProductRepository, qui hérite de JpaRepository. 
 Il fournit automatiquement toutes les opérations CRUD (ajout, suppression, modification, affichage) sans écrire de SQL. 
 C’est la couche reliant l’application aux données.
+
+
 <img width="553" height="188" alt="image" src="https://github.com/user-attachments/assets/775bd86b-3fa0-4859-8688-167279067797" />
 
 
@@ -72,38 +80,56 @@ Cela permet de tester les autorisations et l’accès aux pages sécurisées.
 
 
 
-### 8. password_encoder.png — BCryptPasswordEncoder  
+### 8.  BCryptPasswordEncoder  
 Cette capture montre la configuration du `PasswordEncoder` utilisant l’algorithme **BCrypt**.  
 Il sert à chiffrer les mots de passe avant de les stocker, ce qui garantit une sécurité renforcée des informations utilisateurs.  
 BCrypt est l’encodeur recommandé par Spring Security pour la protection des mots de passe.
 
+<img width="406" height="77" alt="image" src="https://github.com/user-attachments/assets/755a934b-4c66-4221-abf2-d7dc3961c847" />
+
+Certaines ressources sont publiques :
+
+<img width="739" height="34" alt="image" src="https://github.com/user-attachments/assets/3973dbc0-d689-4a3e-9aea-ffab6e2c8986" />
+
+Toutes les autres nécessitent une authentification :
+
+<img width="562" height="31" alt="image" src="https://github.com/user-attachments/assets/a3de8ce6-824b-4d74-8229-8d10ff1c753e" />
+
+Si un utilisateur n’a pas les permissions nécessaires, il est redirigé vers :
+
+<img width="704" height="41" alt="image" src="https://github.com/user-attachments/assets/17737dd6-61e2-4ca0-99e6-e45ec2c15ecd" />
 
 
-### 9. access_rules.png — Règles d’accès Spring Security  
+
+
+
+
+
+### 9.  Règles d’accès Spring Security  
 Cette capture présente les règles d’accès configurées dans `SecurityConfig`.  
 Certaines ressources comme **/public/** et **/webjars/** sont accessibles sans authentification, alors que toutes les autres pages nécessitent une connexion.  
 En cas d’accès à une ressource protégée sans permis, l’utilisateur est automatiquement redirigé vers une page d’erreur dédiée.
 
 
 
-### 10. not_authorized.png — Page d’accès refusé  
+### 10. Page d’accès refusé  
 Cette capture montre la page **Not Authorized**, affichée lorsqu'un utilisateur tente d’accéder à une page pour laquelle il n’a pas les droits.  
 Elle avertit clairement l’utilisateur et améliore l’expérience grâce à un message explicatif adapté.
 
 
 
-### 11. layout.png — Layout principal Thymeleaf  
+### 11.  Layout principal Thymeleaf  
 Cette capture illustre le layout principal de l'application, qui sert de modèle pour toutes les pages.  
 Il contient la barre de navigation, le nom de l’utilisateur connecté (affiché via Spring Security) et une zone dynamique gérée avec `layout:fragment`.  
 Toutes les pages héritent automatiquement de ce layout pour maintenir une interface cohérente et professionnelle.
 
-### 12. products_list.png — Liste des produits  
+### 12.  Liste des produits  
 Cette capture montre la page affichant la liste de tous les produits stockés dans la base de données.  
 On y retrouve un tableau contenant l’identifiant, le nom, le prix et la quantité de chaque produit.  
 Le bouton **Delete** n’apparaît que pour les utilisateurs ayant le rôle **ADMIN**, grâce à la directive `sec:authorize`.
 
 
-### 13. form_add.png — Formulaire d’ajout  
+### 13.  Formulaire d’ajout  
 Cette capture représente la page permettant d’ajouter ou de modifier un produit.  
 Le formulaire utilise les validations Thymeleaf pour afficher automatiquement les erreurs (comme un nom trop court ou une quantité invalide), ce qui améliore la qualité de la saisie utilisateur.
 
